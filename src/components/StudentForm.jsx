@@ -60,6 +60,7 @@ function StudentForm({ addStudent, updateStudent, editStudent }) {
         name="age"
         placeholder="Age"
         type="number"
+        min ="1"
         value={form.age}
         onChange={handleChange}
       />
