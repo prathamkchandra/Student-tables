@@ -34,23 +34,30 @@ function App() {
 
   if (loading) return <h2>Loading students...</h2>;
 
-  return (
-    <div style={{ padding: "20px" }}>
-      <h1>Students Table</h1>
+   return (
+  <div className="container">
 
-      <StudentForm
-        addStudent={addStudent}
-        updateStudent={updateStudent}
-        editStudent={editStudent}
-      />
-
-      <StudentsTable
-        students={students}
-        setEditStudent={setEditStudent}
-        deleteStudent={deleteStudent}
-      />
+    <div className="header">
+      <h1>Student Management System</h1>
+      <p className="subtitle">
+        Add, edit, delete students and export data to Excel
+      </p>
     </div>
-  );
+
+    <StudentForm
+      addStudent={addStudent}
+      updateStudent={updateStudent}
+      editStudent={editStudent}
+    />
+
+    <StudentsTable
+      students={students}
+      setEditStudent={setEditStudent}
+      deleteStudent={deleteStudent}
+    />
+
+  </div>
+);
 }
 
 export default App;
